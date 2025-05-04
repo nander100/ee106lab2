@@ -68,15 +68,8 @@ def callback(scan):
 if __name__ == '__main__':
     rospy.init_node('ranges_check')
     listener = tf.TransformListener()
-    
-    # Allow time for TF to initialize
     rospy.sleep(1.0)
-    
-    # Create publisher for status messages
     pub = rospy.Publisher('/jackal_robot_status', String, queue_size=1)
-    
-    # Subscribe to laser scan topic
     rospy.Subscriber('/front/scan', LaserScan, callback)
-    
     rospy.loginfo("Ranges check node initialized. Monitoring laser scans...")
     rospy.spin()
