@@ -13,61 +13,57 @@ class Turtlebot():
         self.run()
 
     def run(self):
+        a_it = 157
+        l_it = 207
         # declare the velocity variable
         vel = Twist()
 
         #set initail velocity
         # move the robot 4m forward
-        vel.linear.x = 0.5
+        vel.linear.x = 0.2
         vel.angular.z = 0
-        for i in range(80):
+        for i in range(l_it):
             self.vel_pub.publish(vel)
             self.rate.sleep()
         
         vel.linear.x = 0
-        vel.angular.z = 0.5
-        for i in range(35):
+        vel.angular.z = 0.1
+        for i in range(a_it):
             self.vel_pub.publish(vel)
             self.rate.sleep()
 
-        vel.linear.x = 0.5
+        vel.linear.x = 0.2
         vel.angular.z = 0
-        for i in range(80):
+        for i in range(l_it):
             self.vel_pub.publish(vel)
             self.rate.sleep()
         
         vel.linear.x = 0
-        vel.angular.z = 0.5
-        for i in range(35):
+        vel.angular.z = 0.1
+        for i in range(a_it):
             self.vel_pub.publish(vel)
             self.rate.sleep()
 
-        vel.linear.x = 0.5
+        vel.linear.x = 0.2
         vel.angular.z = 0
-        for i in range(80):
+        for i in range(l_it):
             self.vel_pub.publish(vel)
             self.rate.sleep()
         
         vel.linear.x = 0
-        vel.angular.z = 0.5
-        for i in range(35):
+        vel.angular.z = 0.1
+        for i in range(a_it):
             self.vel_pub.publish(vel)
             self.rate.sleep()
         
-        vel.linear.x = 0.5
+        vel.linear.x = 0.2
         vel.angular.z = 0
-        for i in range(80):
+        for i in range(l_it):
             self.vel_pub.publish(vel)
             self.rate.sleep()
         
-        vel.linear.x = 0
-        vel.angular.z = 0.5
-        for i in range(35):
-            self.vel_pub.publish(vel)
-            self.rate.sleep()
-        
-        # set the robot values to 0 so it stops rotating
-        vel.angular.z = 0.0
+        # set the robot values to 0 so it stops moving
+        vel.linear.x = 0.0
         self.vel_pub.publish(vel)
 
 
