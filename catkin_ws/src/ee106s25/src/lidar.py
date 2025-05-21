@@ -3,6 +3,7 @@
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist
+
 class LidarCmdNode:
 	def __init__(self):
 		rospy.init_node('lidar_cmd_node') 
