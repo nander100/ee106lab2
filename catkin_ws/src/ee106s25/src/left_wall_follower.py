@@ -73,8 +73,8 @@ class LeftWallFollowerTF:
               
            elif min_left_dist > self.max_wall_distance:
                # Too far from wall, steer left
-               cmd.linear.x = self.forward_speed * 0.3
-               cmd.angular.z = self.turn_speed * 0.75  # Gentler correction
+               cmd.linear.x = self.forward_speed * 0.9
+               cmd.angular.z = self.turn_speed * 0.4  # Gentler correction
                rospy.loginfo_throttle(1, "Too far from wall, steering left")
               
            else:
